@@ -15,7 +15,7 @@
 sed -i 's/192.168.1.1/192.168.100.10/g' package/base-files/files/bin/config_generate
 
 # 修改版本信息
-sed -i "s/OpenWrt /w.z $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /April Fools 2024 @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # 修改密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
