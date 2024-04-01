@@ -57,6 +57,12 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
+    - name: luci-app-msd_lite install
+      run: |
+        cd openwrt
+        cd package/lean
+        git clone https://github.com/ximiTech/luci-app-msd_lite.git
+
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
