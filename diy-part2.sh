@@ -20,11 +20,15 @@ sed -i "s/OpenWrt /April Fools 2024 @ OpenWrt /g" package/lean/default-settings/
 # 修改密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 
-# 更改源码版本
-# sed -i "s/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/g" target/linux/x86/Makefile
-
 # 删除可能冲突的插件
 rm -rf feeds/smpackage/{base-files,dnsmasq,firewall*,fullconenat,libnftnl,nftables,ppp,opkg,ucl,upx,vsftpd-alt,miniupnpd-iptables,wireless-regdb}
+
+# 安装MultiSD_Lite
+rm -rf feeds/packages/net/msd_lite
+git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
+
+# 更改源码版本
+# sed -i "s/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/g" target/linux/x86/Makefile
 
 # 修改默认主题
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
