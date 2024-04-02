@@ -17,6 +17,9 @@ sed -i 's/192.168.1.1/192.168.100.10/g' package/base-files/files/bin/config_gene
 # 修改版本信息
 sed -i "s/OpenWrt /April Fools 2024 @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
+# 修改主机名
+sed -i 's/OpenWrt/WangZ-Router/g' package/base-files/files/bin/config_generate
+
 # 修改密码为空
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
 
