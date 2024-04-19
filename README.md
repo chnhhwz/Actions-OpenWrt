@@ -1,7 +1,5 @@
 # Actions-OpenWrt
 
-# Actions-OpenWrt
-
 - root  @  192.168.100.10
 - Argone Theme  |  MosDNS  | PassWall | AccessControl | AliDNS | MultiSD_Lite | WOL | FrpS/C | UPnP | Vlmcsd | QoS | EQoS
 
