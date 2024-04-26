@@ -63,6 +63,28 @@ jobs:
         cd package/lean
         git clone https://github.com/ximiTech/luci-app-msd_lite.git
 
+    - name: luci-app-openclash install
+      run: |
+        mkdir package/luci-app-openclash
+        cd package/luci-app-openclash
+        git init
+        git remote add -f origin https://github.com/vernesong/OpenClash.git
+        git config core.sparsecheckout true
+        echo "luci-app-openclash" >> .git/info/sparse-checkout
+        git pull --depth 1 origin master
+        git branch --set-upstream-to=origin/master master
+
+    - name: luci-app-aliddns install
+      run: |
+        mkdir -p package/feeds
+        git clone https://github.com/honwen/luci-app-aliddns.git package/feeds/luci-app-aliddns
+
+    - name: po2lmo install
+      run: |
+        pushd luci-app-openclash/tools/po2lmo
+        make && sudo make install
+        popd
+    
     - name: Load custom feeds
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
