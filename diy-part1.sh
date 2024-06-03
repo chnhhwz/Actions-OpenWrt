@@ -17,7 +17,7 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
 # 添加OpenClash插件
-echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
+#echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
 
 # 添加PassWall插件
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
