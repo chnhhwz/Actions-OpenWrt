@@ -56,18 +56,6 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-
-    - name: luci-app-msd_lite install
-      run: |
-        cd openwrt
-        cd package/lean
-        git clone https://github.com/ximiTech/luci-app-msd_lite.git
-
-    - name: luci-app-aliddns install
-      run: |
-        cd openwrt
-        mkdir -p package/feeds
-        git clone https://github.com/honwen/luci-app-aliddns.git package/feeds/luci-app-aliddns
     
     - name: Load custom feeds
       run: |
