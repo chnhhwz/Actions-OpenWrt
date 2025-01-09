@@ -4,4 +4,4 @@
 - root  @  192.168.100.10
 - ArgonTheme | PassWall | AccessControl | DDNS-GO | Msd_Lite | WOL | FrpS/C | UPnP | KMS | Qos | Eqos
 
-- ❤️  [Lean](https://github.com/coolsnowwolf/lede) |  [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)  |  [kenzok8](https://github.com/kenzok8) |  [ximiTech ](https://github.com/ximiTech)
+- ❤️  [Lean](https://github.com/coolsnowwolf/lede) |  [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)  |  [ximiTech ](https://github.com/ximiTech)
