@@ -11,7 +11,7 @@ sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-defaul
 rm -rf feeds/packages/net/msd_lite
 git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
 
-# 安装argon主题 (使用kenzok8插件集合仓库时不用添加)
+# 安装argon主题
 rm -rf feeds/luci/themes/luci-theme-argon
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
 
