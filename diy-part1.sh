@@ -20,6 +20,3 @@ sed -i '/^src-git luci https:\/\/github.com\/coolsnowwolf\/luci\.git;openwrt-23\
 # 添加PassWall插件
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
 echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
-
-# 添加kenzok8插件集合（包含SSRplus、OpenClash、PassWall）
-#echo 'src-git smpackage https://github.com/kenzok8/small-package' >>feeds.conf.default
