@@ -20,8 +20,7 @@
    swig texinfo uglifyjs upx-ucl unzip vim wget xmlto xxd zlib1g-dev
    ```
 
-- 下载源代码，更新 feeds 并选择配置
-
+- 下载LEDE源代码
    ```bash
    git clone https://github.com/coolsnowwolf/lede openwrt
    cd ~/openwrt
