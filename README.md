@@ -101,5 +101,5 @@
   ```
 
 #
-# ❤️  [Lean](https://github.com/coolsnowwolf/lede) |  [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)  |  [ximiTech ](https://github.com/ximiTech)
+# 感谢 ❤️  [Lean](https://github.com/coolsnowwolf/lede) |  [P3TERX](https://github.com/P3TERX/Actions-OpenWrt)  |  [ximiTech ](https://github.com/ximiTech)
 
