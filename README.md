@@ -24,12 +24,75 @@
 
    ```bash
    git clone https://github.com/coolsnowwolf/lede openwrt
-   cd openwrt
-   ./scripts/feeds update -a
-   ./scripts/feeds install -a
-   make menuconfig
+   cd ~/openwrt
+   ```
+   
+- 更改Luci为18.06
+   ```bash
+   sed -i '/^#src-git luci https:\/\/github.com\/coolsnowwolf\/luci$/s/^#//' feeds.conf.default
+   sed -i '/^src-git luci https:\/\/github.com\/coolsnowwolf\/luci\.git;openwrt-23\.05$/s/^/#/' feeds.conf.default
+   ```
+- 添加OpenClash插件库
+   ```bash
+   echo 'src-git openclash https://github.com/vernesong/OpenClash' >>feeds.conf.default
    ```
 
+- 添加passwall插件库
+   ```bash
+   echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git;main" >> "feeds.conf.default"
+   echo "src-git passwall_packages https://github.com/xiaorouji/openwrt-passwall-packages.git;main" >> "feeds.conf.default"
+   ```
+
+- 添加luci-app-msd_lite
+  ```bash
+  cd package/lean
+  git clone https://github.com/ximiTech/luci-app-msd_lite.git
+  cd ~/openwrt
+  ```
+
+- 更新feeds源
+  ```bash
+  cd ~/openwrt
+  ./scripts/feeds clean
+  ./scripts/feeds update -a
+  ./scripts/feeds install -a
+  #强制安装（-f）feeds，如feeds和lean源有同名的package，强制安装feeds里的
+  #./scripts/feeds install -a -f    
+  ```
+
+- 添加msd_lite
+  ```bash
+  rm -rf feeds/packages/net/msd_lite
+  git clone https://github.com/ximiTech/msd_lite.git feeds/packages/net/msd_lite
+  ```
+
+- 添加argon主题
+  ```bash
+  rm -rf feeds/luci/themes/luci-theme-argon
+  git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git feeds/luci/themes/luci-theme-argon
+  rm -rf feeds/luci/applications/luci-app-argon-config
+  git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
+  ```
+
+- ddns-go
+  ```bash
+  git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
+  ```
+
+- 修改默认IP、密码为空、固件信息
+  ```bash
+  sed -i 's/192.168.1.1/192.168.100.10/g' package/base-files/files/bin/config_generate
+  sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+  sed -i "s/LEDE /Z-turn /g" package/lean/default-settings/files/zzz-default-settings
+  ```
+
+- 配置.config
+  ```bash
+  make menuconfig
+  # Extra packages中  勾选ipv6helper 
+  # Network----Firewall---ip6tables 中勾选全部
+  ```
+  
 - 下载dl库，编译固件
   ```bash
   make -j8 download V=s
