@@ -5,7 +5,7 @@
 - ArgonTheme | PassWall | AccessControl | DDNS-GO | Msd_Lite | WOL | FrpS/C | UPnP | KMS | Qos | Eqos
 #
 
--  # Debian 11 或 Ubuntu LTS
+- ### Debian 11 或 Ubuntu LTS
 - 安装编译依赖
 
    ```bash
