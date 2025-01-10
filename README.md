@@ -52,8 +52,6 @@
 
 - 更新feeds源
   ```bash
-  cd ~/openwrt
-  ./scripts/feeds clean
   ./scripts/feeds update -a
   ./scripts/feeds install -a
   #./scripts/feeds install -a -f 
