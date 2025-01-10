@@ -91,7 +91,7 @@
   make menuconfig
   ```
   Extra packages中  勾选ipv6helper
-  `
+  ```bash
   Network----Firewall---ip6tables 勾选全部
   
   
