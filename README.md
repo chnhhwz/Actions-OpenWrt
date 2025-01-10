@@ -54,11 +54,6 @@
   ./scripts/feeds update -a
   ./scripts/feeds install -a
   ```
-  强制安装（-f）feeds，如feeds和lean源有同名的package，强制安装feeds里的
-  ```bash
-  ./scripts/feeds update -a
-  ./scripts/feeds install -a -f 
-  ```
 
 - 添加msd_lite
   ```bash
