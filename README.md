@@ -72,7 +72,7 @@
   git clone https://github.com/jerrykuku/luci-app-argon-config.git feeds/luci/applications/luci-app-argon-config
   ```
 
-- ddns-go
+- 添加ddns-go
   ```bash
   git clone https://github.com/sirpdboy/luci-app-ddns-go.git package/ddns-go
   ```
