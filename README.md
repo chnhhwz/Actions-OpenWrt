@@ -54,6 +54,8 @@
   ```bash
   ./scripts/feeds update -a
   ./scripts/feeds install -a
+  ```
+  ```bash
   #./scripts/feeds install -a -f 
   #强制安装（-f）feeds，如feeds和lean源有同名的package，强制安装feeds里的
   ```
@@ -87,6 +89,8 @@
 - 配置.config
   ```bash
   make menuconfig
+  ```
+  ```bash
   # Extra packages中  勾选ipv6helper 
   # Network----Firewall---ip6tables 中勾选全部
   ```
