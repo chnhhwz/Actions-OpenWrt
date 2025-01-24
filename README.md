@@ -76,7 +76,15 @@
   sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
   sed -i "s/LEDE /Z-turn /g" package/lean/default-settings/files/zzz-default-settings
   ```
-
+  
+- 更改源码版本
+  ```bash
+  sed -i "s/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=6.1/g" target/linux/x86/Makefile
+  ```
+  ```bash
+  sed -i 's/KERNEL_PATCHVER:=.*/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefile
+  ```
+  
 - 配置.config
   ```bash
   make menuconfig
